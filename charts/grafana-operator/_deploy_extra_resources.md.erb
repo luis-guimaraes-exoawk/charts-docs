@@ -18,11 +18,11 @@ grafana:
   enabled: false
 extraDeploy:
   - apiVersion: integreatly.org/v1alpha1
-    baseImage: docker.io/bitnami/grafana:7
     kind: Grafana
     metadata:
       name: grafana
     spec:
+      baseImage: docker.io/bitnami/grafana:7
       deployment:
         securityContext:
           runAsUser: 1001
